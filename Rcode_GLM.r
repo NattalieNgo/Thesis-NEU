@@ -13,3 +13,5 @@ dev <- factor(col <- rep(1 :n.dev, each=n.origin))
 research <- data.frame(claims=claims, origin=origin, dev=dev)
 research <- research[!(is.na(research$claims) | research$claims==""), ]
 model <- glm(claims ~ origin + dev, family = quasipoisson(), subset=!is.na(claims),data=research)
+
+abc
